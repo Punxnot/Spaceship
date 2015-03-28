@@ -52,7 +52,8 @@ public class ShipController : MonoBehaviour
 		// When the spacebar is pressed
 		if (Input.GetKeyDown("space")) {
 			
-			Instantiate(bullet, transform.position, Quaternion.identity);
+			//Instantiate(bullet, transform.position, Quaternion.identity);
+			Instantiate(bullet, transform.position, Quaternion.AngleAxis(0, Vector3.forward) * transform.rotation);
 			
 		}
 		
